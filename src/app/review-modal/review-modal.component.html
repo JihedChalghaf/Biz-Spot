@@ -1,0 +1,18 @@
+<!-- Worked with https://www.npmjs.com/package/ionic4-rating -->
+
+<ion-header>
+  <ion-title>Give a review</ion-title>
+</ion-header>
+
+<ion-card>
+  <ion-card-content>
+    <rating [(rate)]="rate" readonly="false" size="default" (rateChange)="onRateChange($event)"></rating>
+    <ion-text><u>You rate this as:</u>&nbsp;&nbsp;&nbsp;<b>{{currentMsg}}</b></ion-text>
+    <ion-item></ion-item>
+    <ion-text><u>Talk about your experience:</u>&nbsp;&nbsp;&nbsp;</ion-text>
+    <ion-textarea [(ngModel)]="comment"   color="dark" wrap="soft" maxlength="200"></ion-textarea>
+    <ion-item></ion-item>
+    <ion-button size="medium" shape="round" fill="outline" expand="full" color="success" (click)="sendReview()">Done
+    </ion-button>
+  </ion-card-content>
+</ion-card>

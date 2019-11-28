@@ -1,0 +1,170 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref="tabs/home" slot="start"></ion-back-button>
+    &nbsp;Details Page
+    <ion-buttons slot="end">
+      <ion-button color="light" fill="clear"
+        ><ion-icon slot="icon-only" name="heart"></ion-icon>
+      </ion-button>
+      <ion-button color="light" fill="clear"
+        ><ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="biz">
+    <div class="container">
+      <ion-img
+        [src]="biz.thumbnail==''?'../../assets/img/brand.png':biz.thumbnail"
+        alt=""
+      ></ion-img>
+      <div class="overlay"></div>
+      <div class="wrapper">
+        <div class="badge">
+          <!-- <i class="left"></i>
+          <i class="right"></i> -->
+          Pro &nbsp;
+        </div>
+      </div>
+    </div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="ion-text-center"
+          >{{ biz.title }}
+          <ion-label class="status">{{ biz.status }}</ion-label>
+          <p ion-margin size="medium" fill="outline">
+            <span>
+              <ion-icon
+                slot="center"
+                *ngFor="let star of Arr(round(biz.rating)).fill(1)"
+                name="star"
+                color="warning"
+              >
+              </ion-icon>
+              <ion-icon
+                slot="center"
+                *ngFor="let star of Arr(round(5 - biz.rating)).fill(1)"
+                name="star"
+                color="medium"
+              >
+              </ion-icon>
+              <ion-text
+                >&nbsp;&nbsp;&nbsp;{{round(biz.rating)}}&nbsp;/&nbsp;5</ion-text
+              >
+            </span>
+          </p>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-row
+        class="ion-justify-content-center ion-padding-start ion-padding-end ion-padding-bottom"
+      >
+        <ion-chip
+          *ngFor="let tag of biz.tags ; let i = index"
+          color="secondary"
+          outline
+        >
+          <ion-label>{{ tag }}</ion-label></ion-chip
+        >
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-row>
+          <ion-item class="owner">
+            <ion-avatar slot="start">
+              <img
+                src="{{ owner?.photoUrl=='' ? '../../assets/img/user.png': owner?.photoUrl}}"
+              />
+            </ion-avatar>
+            <ion-label class="name">{{owner?.name}}</ion-label>
+            <ion-row>
+              <ion-label class="location">{{owner?.location}}</ion-label>
+            </ion-row>
+          </ion-item>
+        </ion-row>
+        <br />
+        <ion-row></ion-row>
+        <ion-row>
+          <ion-text color="dark">
+            <ion-icon name="help"></ion-icon> Tunisian entreprise that sends
+            people to space.
+            <br />
+            <ion-icon name="time"></ion-icon> Open from 8h:00 to 12h:00
+            <br />
+            <ion-icon name="call"></ion-icon> Call us on (+216) {{ biz.phone ||
+            '28 586 842' }}
+            <br />
+            <ion-icon name="pin"></ion-icon> GoogleMapsLocationLink
+          </ion-text>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged()">
+      <ion-segment-button value="description">
+        <ion-icon name="text"></ion-icon>
+        <ion-label>Description</ion-label>
+      </ion-segment-button>
+      <ion-segment-button>
+        <ion-icon name="star"></ion-icon>
+        <ion-label>Reviews</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-card *ngIf="!reviewsSelected">
+      <ion-card-content>
+        <ion-text color="dark"
+          >{{ biz.description || 'No description.' }}</ion-text
+        >
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="reviewsSelected" style="margin-bottom : 100px">
+      <ion-card-header>
+        <ion-card-title class="ion-text-start">
+          <ion-button
+            (click)="presentModal()"
+            expand="full"
+            shape="round"
+            size="small"
+            fill="clear"
+            >Give a review
+          </ion-button>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content *ngFor="let r of reviews; let i=index">
+        <ion-row>
+          <ion-avatar>
+            <img src="../../assets/img/user.png" />
+          </ion-avatar>
+          <ion-text color="dark" font-size="10px"
+            >{{r.owner}}:&nbsp;&nbsp;&nbsp;&nbsp;</ion-text
+          >
+          <span>
+            <ion-icon
+              slot="center"
+              *ngFor="let star of Arr(verifyNumber(r.rating)).fill(1)"
+              name="star"
+              color="warning"
+            >
+            </ion-icon>
+            <ion-icon
+              slot="center"
+              *ngFor="let star of Arr(5 - verifyNumber(r.rating)).fill(1)"
+              name="star"
+              color="medium"
+            >
+            </ion-icon>
+          </span>
+        </ion-row>
+        <ion-row></ion-row>
+        <ion-row>
+          <ion-text>{{r.comment}}</ion-text>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

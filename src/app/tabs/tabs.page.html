@@ -1,0 +1,21 @@
+<ion-text class="ion-text-center">WELCOME PIC HERE !</ion-text>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Biz list</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="create">
+      <ion-icon name="add"></ion-icon>
+      <ion-label>Add your Biz</ion-label>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="connected" tab="profile">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+    <ion-tab-button *ngIf="!connected" tab="login">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Login</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

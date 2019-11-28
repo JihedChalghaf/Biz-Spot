@@ -1,0 +1,206 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref="tabs/home" slot="start"></ion-back-button>
+    {{ category }} <ion-icon slot="end" name="restaurant" margin></ion-icon>
+    <ion-buttons slot="end" (click)="presentLoading()">
+      <ion-button color="secondary" fill="outline"
+        >Refresh<ion-icon slot="end" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-row>
+    <ion-searchbar
+      animated
+      showCancelButton="focus"
+      cancelButtonText="Custom Cancel"
+      placeholder="Business"
+      search-icon="business"
+      [(ngModel)]="searchField"
+    >
+    </ion-searchbar>
+    <ion-button
+      color="secondary"
+      expand="block"
+      fill="clear"
+      (click)="presentPopover($event)"
+      ><ion-icon slot="icon-only" name="options"></ion-icon>
+    </ion-button>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-chip
+      color="{{ !filters[0].value ? '' : 'secondary' }}"
+      (click)="filterByTag(0)"
+    >
+      <ion-icon name="time" color="primary"></ion-icon>
+      <ion-label>Open now</ion-label>
+    </ion-chip>
+    <ion-chip
+      color="{{ !filters[1].value ? '' : 'secondary' }}"
+      (click)="filterByTag(1)"
+    >
+      <ion-icon name="cash" color="primary"></ion-icon>
+      <ion-label>High price</ion-label>
+    </ion-chip>
+    <ion-chip
+      color="{{ !filters[2].value ? '' : 'secondary' }}"
+      (click)="filterByTag(2)"
+    >
+      <ion-icon name="cash" color="primary"></ion-icon>
+      <ion-label>Low price</ion-label>
+    </ion-chip>
+  </ion-row>
+
+  <!-- LIST OF BUSINESSES -->
+  <div *ngIf="items.length > 0">
+    <ion-card
+      *ngFor="let item of items; let i = index"
+      (click)="openDetailedInfo(item.id)"
+    >
+      <ion-card-content (click)="openDetailedInfo(item.id)">
+        <ion-grid>
+          <ion-row
+            class="ion-justify-content-center ion-padding-start ion-padding-end"
+          >
+            <ion-col class="ion-float-left" size="7">
+              <h2>
+                {{ item.title }}
+              </h2>
+              <ion-label>
+                <b>{{ item.location }}</b>
+              </ion-label>
+              <p
+                size="small"
+                fill="outline"
+                [ngClass]="{ disactive: item.status != 'Available' }"
+              >
+                Available
+                <span
+                  ><ion-icon
+                    *ngFor="let star of Arr(item.rating).fill(1)"
+                    name="star"
+                  ></ion-icon
+                ></span>
+              </p>
+              <div [ngSwitch]="item.level">
+                <ion-progress-bar
+                  *ngSwitchCase="'raising'"
+                  color="success"
+                  value="0.3"
+                ></ion-progress-bar>
+                <ion-progress-bar
+                  *ngSwitchCase="'recommended'"
+                  color="success"
+                  value="0.6"
+                ></ion-progress-bar>
+                <ion-progress-bar
+                  *ngSwitchCase="'trusted'"
+                  color="success"
+                  value="0.9"
+                ></ion-progress-bar>
+              </div>
+            </ion-col>
+            <ion-col size="5">
+              <div>
+                <ion-img [src]="item.thumbnail"></ion-img>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-card *ngIf="isFiltred && items.length == 0">
+    <ion-card-content>
+      <p>No data Found.</p>
+    </ion-card-content>
+  </ion-card>
+  <div *ngIf="!(items.length > 0) && !isFiltred">
+    <div class="ion-padding custom-skeleton">
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+    </div>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- fab placed to the top and end and on the top edge of the content overlapping header -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="searchItems()">
+      <ion-icon name="search"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

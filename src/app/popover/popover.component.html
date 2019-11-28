@@ -1,0 +1,35 @@
+<!-- <p>
+  <ion-checkbox checked="true"></ion-checkbox>
+
+  <ion-checkbox color="primary"></ion-checkbox>
+  <ion-checkbox color="secondary"></ion-checkbox>
+  <ion-checkbox color="danger"></ion-checkbox>
+  <ion-checkbox color="light"></ion-checkbox>
+  <ion-checkbox color="dark"></ion-checkbox>
+</p> -->
+
+<ion-content class="popover-viewport sc-ion-popover-ios">
+  <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated">
+      <h3>Pick Biz Spot</h3></ion-list-header
+    >
+
+    <ion-item
+      *ngFor="let sub of subCategories"
+      button=""
+      class="item ios in-list ion-activatable ion-focusable hydrated"
+      ><ion-label>{{ sub.title }}</ion-label>
+      <ion-checkbox
+        spot="end"
+        color="secondary"
+        [checked]="sub.title == 'All'"
+      ></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-button
+    expand="block"
+    onclick="dismissPopover()"
+    class="ios button button-block button-solid ion-activatable ion-focusable hydrated"
+    >Close</ion-button
+  >
+</ion-content>

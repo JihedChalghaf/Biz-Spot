@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="flame" class="ion-margin"></ion-icon>BIZspot
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="div0">
+    <ion-avatar>
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/top-biz-c6f07.appspot.com/o/output-onlinepngtools.png?alt=media&token=949d1289-391a-4710-ae55-cc7a5c186b71"
+      />
+    </ion-avatar>
+  </div>
+  <ion-item> <u>Name:</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.name}} </ion-item>
+  <ion-item>
+    <u>Email:</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.email}}
+  </ion-item>
+  <ion-item> <u>Location:</u>&nbsp;&nbsp;{{user.location}} </ion-item>
+
+  <ion-button id="logout" (click)="logout()">logout</ion-button>
+
+  <!-- fab placed to the top and end and on the top edge of the content overlapping header -->
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openCreation()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+</ion-content>

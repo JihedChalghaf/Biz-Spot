@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="flame" class="ion-margin"></ion-icon>BIZspot
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="form-content">
+  <div id="div0">
+    <div class="firstone" id="div1">
+      Get Started Now !
+    </div>
+
+    <form #form="ngForm">
+      <ion-item>
+        <ion-label position="floating" class="firstone">UserName</ion-label>
+        <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="firstone">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="firstone">location</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]="location"
+          name="location"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="firstone">Password</ion-label>
+        <ion-input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" class="firstone"
+          >Confirm Password</ion-label
+        >
+        <ion-input
+          type="password"
+          [(ngModel)]="cpassword"
+          name="cpassword"
+        ></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button (click)="register(name,email,location,password,cpassword)"
+            >Sign Up</ion-button
+          >
+        </ion-col>
+        <ion-col class="align-text-middle" routerLink="/login"
+          >Already a member?
+        </ion-col>
+      </ion-row>
+    </form>
+    <ion-button id="ignore" routerLink="/tabs/home">Ignore</ion-button>
+  </div>
+</ion-content>
