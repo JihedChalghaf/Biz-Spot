@@ -44,7 +44,7 @@ export class AuthService {
       var res = await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
       if (res) {
         console.log("Successfully registered!");
-        this.firestore.doc('users/' + res.user.uid).set({ 'name': name, 'location': location, 'email': email, 'id': res.user.uid, 'photoUrl': "" });
+        this.firestore.doc('users/' + res.user.uid).set({ 'name': name, 'location': location, 'email': email, 'id': res.user.uid, 'photoUrl': "https://firebasestorage.googleapis.com/v0/b/top-biz-c6f07.appspot.com/o/picprofile.png?alt=media&token=ed2b0dad-4b52-4126-9927-be5a6bd435bb" });
         await this.login(email, password);
       }
     } catch (err) {

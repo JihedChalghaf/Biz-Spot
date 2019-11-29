@@ -45,28 +45,28 @@ export class HomePage implements OnInit {
         },
         {
           title: "Home Services",
-          thumbnail_url: "../../assets/img/card_1.png",
+          thumbnail_url: "../../assets/img/homeservices.jpg",
           count: this.allBiz.filter(biz => {
             return biz.category.name.toLowerCase().includes("home");
           }).length
         },
         {
           title: "Health & Pets",
-          thumbnail_url: "../../assets/img/card_6.png",
+          thumbnail_url: "../../assets/img/healthandpets.jpg",
           count: this.allBiz.filter(biz => {
             return biz.category.name.toLowerCase().includes("health");
           }).length
         },
         {
           title: "Repairators",
-          thumbnail_url: "../../assets/img/card_5.png",
+          thumbnail_url: "../../assets/img/repairators.jpg",
           count: this.allBiz.filter(biz => {
             return biz.category.name == "Repairators";
           }).length
         },
         {
           title: "Others",
-          thumbnail_url: "../../assets/img/account-background.jpg",
+          thumbnail_url: "../../assets/img/others.jpg",
           count: this.allBiz.filter(biz => {
             return biz.category.name.toLowerCase().includes("others");
           }).length
