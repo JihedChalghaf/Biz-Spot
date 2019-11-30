@@ -1,10 +1,10 @@
 # Biz-Spot
 
 # Graphics
-![alt text](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png)
-
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png"  width="80%"   >
 
 # Team
+4INSAT
 [Jihed Chalghaf](https://github.com/jihedchalghaf)
 
 
