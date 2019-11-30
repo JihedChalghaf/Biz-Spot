@@ -1,7 +1,7 @@
 # Biz-Spot
 
 # Graphics
-![alt text](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Promo%20Graphic%20Default.png)
+![alt text](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png)
 
 
 # Team
