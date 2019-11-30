@@ -1,31 +1,32 @@
 # Biz-Spot
 
 # Graphics
+
 <p  align="center" >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png" 
    width="80%"   />
   </p>
 
 # Team
+
 4INSAT
 
 [Jihed Chalghaf](https://github.com/jihedchalghaf)
 
 
 # Short description
+
 Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.
+ 
+# [Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
 
-
------------------------
-[Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
 <p  align="center" >
-<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Code/resources/android/splash/drawable-land-mdpi-screen.png" 
-    href="https://www.youtube.com/watch?v=tj7BAOdBkIA"   >
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Code/resources/android/splash/drawable-land-mdpi-screen.png" >
  </p>
------------------------
-
+ 
 
 # Description
+
 BIZspot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community; the clients.
 Did you ever need a certain service and didn't know where to search? to gather information about some category of businesses? or to consult about a company before dealing with them?
 If simple googling didn't get you enough information, then this app will save you!
@@ -41,6 +42,7 @@ This will improve the quality of business products and service interactions, by 
 
 
 # Screenshots
+
 <div style="display : inline-block;margin : 3% 3% 3% 3%">
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/home.png"  width="24%"   >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/categories.png"  width="24%"   >
@@ -50,6 +52,7 @@ This will improve the quality of business products and service interactions, by 
 
   
 # Licence
+
 MIT License
 
 Copyright (c) 2019 Jihed Chalghaf
