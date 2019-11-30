@@ -1,7 +1,7 @@
 # Biz-Spot
 
 # Graphics
-
+![alt text](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Promo%20Graphic%20Default.png)
 
 # Team
 [Jihed Chalghaf](https://github.com/jihedchalghaf)
@@ -28,7 +28,9 @@ And finally they can submit a request to create a thread for your business, afte
 This will improve the quality of business products and service interactions, by quickly delivering the necessary feedback from the clients to the owners, while at the same time raising awareness in the community about the good and bad ones.
 
 # Screenshots
-
+![alt Home](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/home.png)
+![alt Category](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/categories.png)
+![alt Intro](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/intro.png)
 # Licence
 MIT License
 Copyright (c) 2019 Jihed Chalghaf
