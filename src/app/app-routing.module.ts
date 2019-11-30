@@ -32,7 +32,7 @@ const routes: Routes = [
     path: "tabs",
     loadChildren: "./tabs/tabs.module#TabsPageModule"
   },
-  { path: "", redirectTo: "login", pathMatch: "full" },
+//  { path: "", redirectTo: "tabs/home", pathMatch: "full" },
   {
     path: "category/:ref",
     loadChildren: () =>
@@ -42,8 +42,6 @@ const routes: Routes = [
     loadChildren: () => import('./creation/creation.module').then( m => m.CreationPageModule)
   }
 
-
-  //{ path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
 ];
 
 @NgModule({

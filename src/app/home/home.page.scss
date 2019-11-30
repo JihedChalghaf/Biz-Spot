@@ -67,6 +67,11 @@ ion-card ion-row {
 .progress {
   color: var(--ion-color-primary);
   width: 100%;
+  padding: 0 !important;
+}
+
+.progress ion-col {
+  padding: 0 !important;
 }
 
 .progress span {
@@ -75,8 +80,8 @@ ion-card ion-row {
 
 ion-progress-bar {
   height: 12px;
-  width: 56%;
-  margin-top: 6px;
+  width: 90%;
+  margin-top: 4px;
   margin-left: 8px;
   display: inline-block;
 }

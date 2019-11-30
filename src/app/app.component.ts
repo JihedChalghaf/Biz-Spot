@@ -26,7 +26,8 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.overlaysWebView(false);
       this.statusBar.backgroundColorByHexString("#161036"); // this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      setTimeout( ()=> { this.splashScreen.hide(); }, 1000);
+
     });
 
     this.authService.authenticationState.subscribe(state => {

@@ -102,24 +102,26 @@
                   ></ion-icon>
                 </span>
               </p>
-              <div [ngSwitch]="item.level" class="progress">
-                <span>Reliability</span
-                ><ion-progress-bar
-                  *ngSwitchCase="'raising'"
-                  color="primary"
-                  value="0.3"
-                ></ion-progress-bar>
-                <ion-progress-bar
-                  *ngSwitchCase="'recommended'"
-                  color="primary"
-                  value="0.6"
-                ></ion-progress-bar>
-                <ion-progress-bar
-                  *ngSwitchCase="'trusted'"
-                  color="primary"
-                  value="0.9"
-                ></ion-progress-bar>
-              </div>
+              <ion-row [ngSwitch]="item.level" class="progress">
+                <ion-col size="5">Reliability</ion-col>
+                <ion-col size="7"
+                  ><ion-progress-bar
+                    *ngSwitchCase="'raising'"
+                    color="primary"
+                    value="0.3"
+                  ></ion-progress-bar>
+                  <ion-progress-bar
+                    *ngSwitchCase="'recommended'"
+                    color="primary"
+                    value="0.6"
+                  ></ion-progress-bar>
+                  <ion-progress-bar
+                    *ngSwitchCase="'trusted'"
+                    color="primary"
+                    value="0.9"
+                  ></ion-progress-bar>
+                </ion-col>
+              </ion-row>
             </ion-col>
             <ion-col size="5">
               <div>

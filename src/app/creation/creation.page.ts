@@ -212,38 +212,41 @@ export class CreationPage implements OnInit {
         this.location.city +
         " " +
         this.location.zip;
-
-      this.bizService.getBusinessByTitle(this.mBiz.title).subscribe(biz => {
-        console.log(biz);
-        if (biz !== undefined) {
-          this.presentAlertPromptError();
-        } else {
-          let emptyKeys = [];
-          let reservedKeys = ["thumbnail", "images", "reviews"];
-          for (var key in this.mBiz) {
-            if (
-              this.mBiz.hasOwnProperty(key) &&
-              this.mBiz[key] == "" &&
-              !reservedKeys.includes(key)
-            ) {
-              emptyKeys.push(key);
+      if (this.mBiz.title == "") {
+        this.presentAlertPrompt();
+      } else {
+        this.bizService.getBusinessByTitle(this.mBiz.title).subscribe(biz => {
+          console.log(biz);
+          if (biz !== undefined) {
+            this.presentAlertPromptError();
+          } else {
+            let emptyKeys = [];
+            let reservedKeys = ["thumbnail", "images", "reviews"];
+            for (var key in this.mBiz) {
+              if (
+                this.mBiz.hasOwnProperty(key) &&
+                this.mBiz[key] == "" &&
+                !reservedKeys.includes(key)
+              ) {
+                emptyKeys.push(key);
+              }
             }
+            if (emptyKeys.length > 0) this.presentToastWithOptions(emptyKeys);
+            else {
+              console.log(this.mBiz);
+              this.presentLoadingLong();
+              this.bizService.addBusiness(this.mBiz).then(biz => {
+                console.log(biz);
+                this.mBiz.id = biz.id;
+                //   if (this.imageThumbnail != undefined)
+                //     this.uploadFile(this.imageThumbnail);
+              });
+            }
+            // else {
+            // }
           }
-          if (emptyKeys.length > 0) this.presentToastWithOptions(emptyKeys);
-          else {
-            console.log(this.mBiz);
-            this.presentLoadingLong();
-            this.bizService.addBusiness(this.mBiz).then(biz => {
-              console.log(biz);
-              this.mBiz.id = biz.id;
-              //   if (this.imageThumbnail != undefined)
-              //     this.uploadFile(this.imageThumbnail);
-            });
-          }
-          // else {
-          // }
-        }
-      });
+        });
+      }
     });
   }
 

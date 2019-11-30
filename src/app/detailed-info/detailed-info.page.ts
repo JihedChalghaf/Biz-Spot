@@ -137,6 +137,7 @@ export class DetailedInfoPage {
       if (r.rating) sumRatings += r.rating;
     });
 
+    console.log("here", Math.round(sumRatings / nbRatings));
     if (nbRatings) this.biz.rating = Math.round(sumRatings / nbRatings);
     else this.biz.rating = 0;
   }
