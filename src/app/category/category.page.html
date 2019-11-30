@@ -58,6 +58,7 @@
     <ion-card
       *ngFor="let item of items; let i = index"
       (click)="openDetailedInfo(item.id)"
+      class="animated fadeInUp"
     >
       <ion-card-content (click)="openDetailedInfo(item.id)">
         <ion-grid>

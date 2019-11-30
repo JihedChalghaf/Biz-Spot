@@ -31,14 +31,13 @@
       </ion-item>
       <ion-row>
         <ion-col class="ion-text-center">
-          <ion-button (click)="login(email, password)">Login</ion-button>
+          <ion-button (click)="login()">Login</ion-button>
         </ion-col>
-        <ion-col class="align-text-middle" routerLink="/register"
+        <ion-col class="align-text-middle" (click)="redirectRegister()"
           >Create account ?</ion-col
         >
       </ion-row>
     </form>
-    <ion-button id="ignore" routerLink="/tabs/home">Ignore</ion-button>
-    <!-- <ion-button id="ignore" routerLink="/creation">Ignore</ion-button> -->
+    <ion-button id="ignore" (click)="ignore()">Ignore</ion-button>
   </div>
 </ion-content>

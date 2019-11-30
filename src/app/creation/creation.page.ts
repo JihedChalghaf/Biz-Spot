@@ -3,6 +3,7 @@ import { BusinessService } from "./../services/business.service";
 import { AuthService } from "./../services/auth.service";
 import { Category } from "./../models/category";
 import { Router } from "@angular/router";
+import { Platform } from "@ionic/angular";
 import { Component, OnInit } from "@angular/core";
 import { AlertController } from "@ionic/angular";
 import { ToastController } from "@ionic/angular";
@@ -71,7 +72,8 @@ export class CreationPage implements OnInit {
     private router: Router,
     private authService: AuthService,
     private bizService: BusinessService,
-    private storage: AngularFireStorage
+    private storage: AngularFireStorage,
+    private platform: Platform
   ) {
     this.imageThumbnail = "";
     this.inputList = [
@@ -144,7 +146,7 @@ export class CreationPage implements OnInit {
       thumbnail: "",
       location: "",
       email: "",
-      phone: 0,
+      phone: +216,
       images: [],
       rating: 1,
       owner: "",
@@ -169,8 +171,17 @@ export class CreationPage implements OnInit {
     };
   }
 
-  ngOnInit() {
+  ionViewWillEnter() {
     this.presentLoading();
+  }
+
+  ngOnInit() {
+    // this.presentLoading();
+
+    this.platform.backButton.subscribeWithPriority(999990, () => {
+      //alert("back pressed");
+      this.router.navigate(["tabs/home"]);
+    });
   }
 
   toggleSection(index) {
@@ -249,13 +260,6 @@ export class CreationPage implements OnInit {
           text: "Ok",
           handler: () => {
             console.log("Favorite clicked");
-          }
-        },
-        {
-          text: "Done",
-          role: "cancel",
-          handler: () => {
-            console.log("Cancel clicked");
           }
         }
       ]
@@ -371,7 +375,7 @@ export class CreationPage implements OnInit {
   }
 
   cancel() {
-    this.router.navigateByUrl("login");
+    this.router.navigateByUrl("tabs/home");
   }
 
   async presentLoading() {
@@ -404,7 +408,9 @@ export class CreationPage implements OnInit {
       text: "Your Biz has been created sucessfully",
       icon: "success",
       title: "WOOW!"
-    }).then();
+    }).then(() => {
+      this.router.navigateByUrl("tabs/home");
+    });
   }
 
   pickImage(sourceType) {

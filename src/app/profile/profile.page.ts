@@ -2,6 +2,7 @@ import { Router } from "@angular/router";
 import { Component } from "@angular/core";
 import { AuthService } from "../services/auth.service";
 import { AngularFirestore } from "@angular/fire/firestore";
+import { Platform } from "@ionic/angular";
 
 @Component({
   selector: "app-profile",
@@ -11,6 +12,7 @@ import { AngularFirestore } from "@angular/fire/firestore";
 export class ProfilePage {
   user: any;
   constructor(
+    private platform: Platform,
     private firestore: AngularFirestore,
     private authService: AuthService,
     private router: Router
@@ -36,9 +38,15 @@ export class ProfilePage {
           this.user = data;
         });
     });
+
+    this.platform.backButton.subscribeWithPriority(999990,  () => {
+                //alert("back pressed");
+                this.router.navigate(["tabs/home"]);
+            });
+
   }
 
-  ngOnInit() {}
+
 
   openCreation() {
     this.router.navigateByUrl("creation");

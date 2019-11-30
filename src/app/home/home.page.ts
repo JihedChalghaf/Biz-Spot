@@ -1,10 +1,13 @@
 import { BusinessService } from "./../services/business.service";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { Business } from "../models/business";
 import { Observable } from "rxjs";
 import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 import { Router, NavigationExtras } from "@angular/router";
 import { LoadingController } from "@ionic/angular";
+import { ToastController } from "@ionic/angular";
+import { IonContent } from "@ionic/angular";
+import { Platform } from "@ionic/angular";
 
 @Component({
   selector: "app-home",
@@ -22,13 +25,16 @@ export class HomePage implements OnInit {
 
   bizField: string = "";
   locationField: string = "";
+  @ViewChild(IonContent, { static: false }) content: IonContent;
 
   constructor(
+    private platform: Platform,
     private bizService: BusinessService,
     private router: Router,
+    private toastController: ToastController,
     private sanitizer: DomSanitizer,
     public loadingController: LoadingController
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.bizService.getAllBusiness().subscribe(allItems => {
@@ -45,14 +51,14 @@ export class HomePage implements OnInit {
         },
         {
           title: "Home Services",
-          thumbnail_url: "../../assets/img/homeservices.jpg",
+          thumbnail_url: "../../assets/img/home.jpg",
           count: this.allBiz.filter(biz => {
             return biz.category.name.toLowerCase().includes("home");
           }).length
         },
         {
           title: "Health & Pets",
-          thumbnail_url: "../../assets/img/healthandpets.jpg",
+          thumbnail_url: "../../assets/img/petet.jpg",
           count: this.allBiz.filter(biz => {
             return biz.category.name.toLowerCase().includes("health");
           }).length
@@ -81,7 +87,12 @@ export class HomePage implements OnInit {
     ];
   }
 
-  ionViewWillEnter() { }
+  ionViewWillEnter() {
+    this.platform.backButton.subscribeWithPriority(999990, () => {
+      //alert("back pressed");
+      navigator["app"].exitApp();
+    });
+  }
 
   viewCategories(title) {
     this.router.navigate(["category", title]);
@@ -95,8 +106,20 @@ export class HomePage implements OnInit {
           item.location.toLowerCase().includes(this.locationField.toLowerCase())
         );
       });
-
+    else {
+      this.ScrollToTop();
+      this.presentToast("On top search by Name | Address");
+    }
     this.isFiltred = this.items.length == 0;
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 3000,
+      showCloseButton: true
+    });
+    toast.present();
   }
 
   refresh() {
@@ -170,5 +193,9 @@ export class HomePage implements OnInit {
 
     console.log("Loading dismissed!");
     this.refresh();
+  }
+
+  ScrollToTop() {
+    this.content.scrollToTop(1500);
   }
 }

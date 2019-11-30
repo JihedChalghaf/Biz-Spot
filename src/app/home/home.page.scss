@@ -64,8 +64,21 @@ ion-card ion-row {
   padding-left: 4px;
 }
 
+.progress {
+  color: var(--ion-color-primary);
+  width: 100%;
+}
+
+.progress span {
+  max-width: 30% !important;
+}
+
 ion-progress-bar {
   height: 12px;
+  width: 56%;
+  margin-top: 6px;
+  margin-left: 8px;
+  display: inline-block;
 }
 
 ion-col ion-label {
@@ -75,7 +88,8 @@ ion-col ion-label {
 ion-col p {
   font-weight: 100;
   font-size: 1em;
-  color: rgb(255, 165, 61);
+  // color: rgb(255, 165, 61);
+  color: rgb(244, 124, 54);
 }
 
 ion-col p span {
@@ -88,12 +102,12 @@ ion-col label {
 
 .thumbnail {
   width: 100%;
-  height: 95%;
+  height: 100%;
   z-index: -999;
 }
 
 .stacked {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .overlay {
@@ -104,7 +118,8 @@ ion-col label {
   height: 100%;
   z-index: 1;
   background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(255, 136, 0));
-  opacity: 0.4;
+  // background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(244, 124, 54));
+  opacity: 0.3;
 }
 .detach {
   z-index: 999;
@@ -136,11 +151,11 @@ ion-col label {
 }
 
 .disactive {
-  color: #85c0e4 !important;
+  color: #5397c2 !important;
   text-decoration: line-through;
 }
 .disactive span {
-  color: rgb(255, 165, 61) !important;
+  color: rgb(244, 124, 54) !important;
 }
 
 /* Custom Skeleton Line Height and Margin */

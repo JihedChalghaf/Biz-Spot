@@ -1,3 +1,4 @@
+import { Router } from "@angular/router";
 import { LoadingController } from "@ionic/angular";
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../../services/auth.service";
@@ -8,11 +9,11 @@ import { ToastController } from "@ionic/angular";
   templateUrl: "./register.page.html",
   styleUrls: ["./register.page.scss"]
 })
-export class RegisterPage implements OnInit {
+export class RegisterPage {
   constructor(
     private authService: AuthService,
     public loadingController: LoadingController,
-
+    private router: Router,
     private toastController: ToastController
   ) {}
 
@@ -22,6 +23,7 @@ export class RegisterPage implements OnInit {
   password: string = "";
   cpassword: string = "";
 
+  //register function
   async register() {
     const { name, location, email, password, cpassword } = this;
     if (password !== cpassword) {
@@ -32,7 +34,7 @@ export class RegisterPage implements OnInit {
       await this.authService.register(email, password, name, location);
     }
   }
-
+  //toast method
   async presentToast(message: string) {
     const toast = await this.toastController.create({
       message: message,
@@ -54,6 +56,4 @@ export class RegisterPage implements OnInit {
 
     console.log("Loading dismissed!");
   }
-
-  ngOnInit() {}
 }

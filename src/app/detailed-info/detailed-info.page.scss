@@ -115,14 +115,23 @@ ion-toolbar {
 
 ion-card ion-card-title {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 p ion-text {
   color: rgb(70, 32, 141);
+  font-size: 0.9em;
 }
 
 .status {
+  color: rgb(255, 136, 0);
+  font-weight: 500;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 6px;
+}
+
+.nstatus {
   color: #163763;
   font-weight: 500;
   font-size: 0.8em;
@@ -139,24 +148,30 @@ ion-card-header {
   padding-bottom: 0px !important;
 }
 
-.owner ion-avatar {
-  width: 50px;
+ion-col ion-avatar {
+  width: 54px;
   height: auto;
+  margin-top: 8px;
 }
 
 .owner ion-label {
   display: block;
   color: rgb(23, 142, 197);
   font-weight: 500;
-  margin-left: 8px;
-  font-size: 1.2em;
+  margin-left: 12px;
+  font-size: 1.1em;
 }
 
 .owner .name {
   color: rgb(23, 142, 197);
+  margin-top: 12px;
 }
 
 .owner .location {
   color: rgb(45, 45, 45);
   font-weight: 600;
+  margin-top: 2px;
+  width: 100%;
 }
+// .owner .location ion-badge {
+// }

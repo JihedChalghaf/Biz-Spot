@@ -5,8 +5,7 @@ import { AuthenticationGuard } from "./guards/authentication.guard";
 const routes: Routes = [
   {
     path: "login",
-    loadChildren: "./pages/login/login.module#LoginPageModule"
-    //  loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)},
+    loadChildren: "./pages/login/login.module#LoginPageModule"   //  loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)},
   },
   {
     path: "profile",

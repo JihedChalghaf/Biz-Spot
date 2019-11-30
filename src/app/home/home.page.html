@@ -22,7 +22,7 @@
   </ion-segment-button>
 </ion-segment>
 
-<ion-content>
+<ion-content [scrollEvents]="true">
   <ion-row>
     <ion-searchbar
       animated
@@ -75,6 +75,7 @@
     <ion-card
       *ngFor="let item of items; let i = index"
       (click)="openDetailedInfo(item.id)"
+      class="animated fadeInUp"
     >
       <ion-card-content (click)="openDetailedInfo(item.id)">
         <ion-grid>
@@ -101,20 +102,21 @@
                   ></ion-icon>
                 </span>
               </p>
-              <div [ngSwitch]="item.level">
-                <ion-progress-bar
+              <div [ngSwitch]="item.level" class="progress">
+                <span>Reliability</span
+                ><ion-progress-bar
                   *ngSwitchCase="'raising'"
-                  color="success"
+                  color="primary"
                   value="0.3"
                 ></ion-progress-bar>
                 <ion-progress-bar
                   *ngSwitchCase="'recommended'"
-                  color="success"
+                  color="primary"
                   value="0.6"
                 ></ion-progress-bar>
                 <ion-progress-bar
                   *ngSwitchCase="'trusted'"
-                  color="success"
+                  color="primary"
                   value="0.9"
                 ></ion-progress-bar>
               </div>
@@ -220,8 +222,8 @@
   <div *ngIf="selected && categories.length > 0">
     <ion-card
       *ngFor="let cat of categories"
-      class="stacked"
       (click)="viewCategories(cat.title)"
+      class="animated fadeIn stacked"
     >
       <ion-img [src]="cat.thumbnail_url" class="thumbnail"></ion-img>
       <div class="overlay"></div>

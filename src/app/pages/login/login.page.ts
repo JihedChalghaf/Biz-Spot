@@ -1,3 +1,4 @@
+import { Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../../services/auth.service";
 import { LoadingController } from "@ionic/angular";
@@ -7,20 +8,23 @@ import { LoadingController } from "@ionic/angular";
   templateUrl: "./login.page.html",
   styleUrls: ["./login.page.scss"]
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
   constructor(
     private authService: AuthService,
+    private router: Router,
     public loadingController: LoadingController
   ) {}
 
   email: string = "";
   password: string = "";
 
+  //login function
   async login() {
     const { email, password } = this;
     this.presentLoading();
     await this.authService.login(email, password);
   }
+
   async presentLoading() {
     const loading = await this.loadingController.create({
       message: "Please wait...",
@@ -34,5 +38,11 @@ export class LoginPage implements OnInit {
     console.log("Loading dismissed!");
   }
 
-  ngOnInit() {}
+  redirectRegister() {
+    this.router.navigate(["register"]);
+  }
+
+  ignore() {
+    this.router.navigate(["tabs/home"]);
+  }
 }
