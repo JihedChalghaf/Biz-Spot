@@ -37,6 +37,4 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-| [Bizspot app's executable file](https://github.com/master/Code/app-debug.apk) | [BIZspot repository](https://github.com/) | Team Name: 4INSAT | Short Description: Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.
-
-. | [Licence: MIT](https://github.com/master/) | Country: Tunisia | Collaborators: [Jihed Chalghaf](https://github.com/jihedchalghaf) |
+| [Bizspot app's executable file](https://github.com/master/Code/app-debug.apk) | [BIZspot repository](https://github.com/) | Team Name: 4INSAT | Short Description: Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.| [Licence: MIT](https://github.com/master/) | Country: Tunisia | Collaborators: [Jihed Chalghaf](https://github.com/jihedchalghaf) |
