@@ -1,8 +1,10 @@
 # Biz-Spot
 
 # Graphics
+<p  align="center" >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png" 
- style="margin : 0 auto;"  width="80%"   />
+   width="80%"   />
+  </p>
 
 # Team
 4INSAT
@@ -18,7 +20,7 @@ Biz-Spot is a mobile application that serves as a network of business owners and
 [Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
 <p  align="center" >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Code/resources/android/splash/drawable-land-mdpi-screen.png" 
-   width="80%"   >
+       >
  </p>
 -----------------------
 
