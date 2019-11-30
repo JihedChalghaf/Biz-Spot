@@ -29,9 +29,10 @@ This will improve the quality of business products and service interactions, by 
 
 # Screenshots
 <div style="display : inline-block;margin : 3% 3% 3% 3%">
-<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/home.png" align="left" width="20%"   >
-<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/categories.png" align="center" width="20%"   >
-<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/intro.png" align="right" width="20%"   >
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/home.png"  width="18%"   >
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/categories.png"  width="18%"   >
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/intro.png" width="18%"   >
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/details.png" width="18%"   >
 <div>
 # Licence
 MIT License
