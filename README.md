@@ -13,7 +13,7 @@ Biz-Spot is a mobile application that serves as a network of business owners and
 
 
 -----------------------
-[Promotional Video](https://youtu.be/)
+[Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
 -----------------------
 
 
@@ -52,4 +52,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 # Summary
 
-| [Bizspot app's Apk](https://github.com/master/Code/app-debug.apk) | [BIZspot repository](https://github.com/) | Team Name: 4INSAT | Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.| [Licence: MIT](https://github.com/master/) | Country: Tunisia | Collaborators: [Jihed Chalghaf](https://github.com/jihedchalghaf) |
+| [Bizspot app's Apk](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Apk/BizspotApp.apk) | [BIZspot repository](https://github.com/JihedChalghaf/Biz-Spot) | Team Name: 4INSAT | Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.| Licence: MIT | Country: Tunisia | Collaborators: [Jihed Chalghaf](https://github.com/jihedchalghaf) |
