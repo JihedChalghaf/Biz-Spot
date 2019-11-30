@@ -1,7 +1,7 @@
 # Biz-Spot
 
 # Graphics
-<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png"  align="center" width="80%"   >
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png" style="margin : 0 auto;"width="80%"   >
 
 # Team
 4INSAT
