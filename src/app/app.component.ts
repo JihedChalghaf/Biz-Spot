@@ -5,6 +5,7 @@ import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { AuthService } from "./services/auth.service";
 import { Router } from "@angular/router";
+import { Storage } from "@ionic/storage";
 
 @Component({
   selector: "app-root",
@@ -17,7 +18,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private storage: Storage
   ) {
     this.initializeApp();
   }
@@ -26,17 +28,26 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.overlaysWebView(false);
       this.statusBar.backgroundColorByHexString("#161036"); // this.statusBar.styleDefault();
-      setTimeout( ()=> { this.splashScreen.hide(); }, 1000);
-
+      setTimeout(() => {
+        this.splashScreen.hide();
+      }, 1000);
     });
 
-    this.authService.authenticationState.subscribe(state => {
-      if (state) {
-        this.router.navigate(["tabs/home"]);
-      }
+    // Or to get a key/value pair
+    this.storage.get("visit").then(val => {
+      console.log("first visit", val);
+      if (val == true) {
+        this.authService.authenticationState.subscribe(state => {
+          if (state) {
+            this.router.navigate(["tabs/home"]);
+          }
 
-      if (state == false) {
-        this.router.navigate(["login"]);
+          if (state == false) {
+            this.router.navigate(["login"]);
+          }
+        });
+      } else {
+        this.router.navigate(["slider"]);
       }
     });
   }

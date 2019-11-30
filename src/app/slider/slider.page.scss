@@ -1,0 +1,44 @@
+ion-slides {
+  height: 100% !important;
+  padding-top: 56px;
+  background: rgb(7, 11, 64);
+}
+ion-slide {
+  background: rgb(7, 11, 64);
+  //   background: #023374;
+  height: 100% !important;
+  width: 100%;
+  display: block !important;
+  position: relative !important;
+  text-align: center;
+}
+ion-slide ion-row {
+  text-align: center;
+}
+
+ion-row * {
+  position: relative !important;
+  margin: 12px auto !important;
+  color: #fff;
+}
+
+ion-row ion-img {
+  width: 60%;
+  height: auto;
+}
+
+ion-row ion-label {
+  padding-left: 24px;
+  padding-right: 24px;
+  color: #eee;
+  font-size: 0.9em;
+}
+
+ion-row h2 {
+  padding-top: 4px;
+  padding-bottom: 16px;
+}
+
+ion-row ion-button {
+  margin-top: 32px !important;
+}

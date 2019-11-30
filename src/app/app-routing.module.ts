@@ -4,8 +4,13 @@ import { AuthenticationGuard } from "./guards/authentication.guard";
 
 const routes: Routes = [
   {
+    path: "slider",
+    loadChildren: () =>
+      import("./slider/slider.module").then(m => m.SliderPageModule)
+  },
+  {
     path: "login",
-    loadChildren: "./pages/login/login.module#LoginPageModule"   //  loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)},
+    loadChildren: "./pages/login/login.module#LoginPageModule" //  loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)},
   },
   {
     path: "profile",
@@ -32,16 +37,17 @@ const routes: Routes = [
     path: "tabs",
     loadChildren: "./tabs/tabs.module#TabsPageModule"
   },
-//  { path: "", redirectTo: "tabs/home", pathMatch: "full" },
+  //  { path: "", redirectTo: "tabs/home", pathMatch: "full" },
   {
     path: "category/:ref",
     loadChildren: () =>
       import("./category/category.module").then(m => m.CategoryPageModule)
-  },  {
-    path: 'creation',
-    loadChildren: () => import('./creation/creation.module').then( m => m.CreationPageModule)
+  },
+  {
+    path: "creation",
+    loadChildren: () =>
+      import("./creation/creation.module").then(m => m.CreationPageModule)
   }
-
 ];
 
 @NgModule({

@@ -1,0 +1,61 @@
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" #slides>
+    <ion-slide>
+      <ion-row class="animated fadeInDown">
+        <ion-img src="../../assets/img/slide10.png"> </ion-img>
+      </ion-row>
+      <ion-row class="animated fadeInDown">
+        <h2>Best Service Finder</h2>
+      </ion-row>
+      <ion-row class="animated fadeInDown">
+        <ion-label>
+          Find the Best Services in Town<br />
+          Browse Businesses by Category <br />and much more!
+        </ion-label>
+      </ion-row>
+      <ion-row class="animated fadeInDown">
+        <ion-button color="tertiary" (click)="next()">
+          Next
+        </ion-button>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <ion-row>
+        <ion-img src="../../assets/img/slide2.PNG"> </ion-img>
+      </ion-row>
+      <ion-row>
+        <h2>Grow Your Potential</h2>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          Change who knows you and where to find you and invest in growing your
+          capacity
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-button color="tertiary" (click)="next()">
+          Next
+        </ion-button>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <ion-row>
+        <ion-img src="../../assets/img/slide8.png"> </ion-img>
+      </ion-row>
+      <ion-row>
+        <h2>More Reliable Then Ever!</h2>
+      </ion-row>
+      <ion-row>
+        <ion-label>
+          Users say it would be more efficient and even more reliable than ever
+          before.
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" (click)="go()">
+          Let's Go!
+        </ion-button>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
