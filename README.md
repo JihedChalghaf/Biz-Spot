@@ -20,7 +20,7 @@ Biz-Spot is a mobile application that serves as a network of business owners and
 [Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
 <p  align="center" >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Code/resources/android/splash/drawable-land-mdpi-screen.png" 
-       >
+    href="https://www.youtube.com/watch?v=tj7BAOdBkIA"   >
  </p>
 -----------------------
 
