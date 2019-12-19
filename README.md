@@ -1,44 +1,50 @@
-# Biz-Spot
+# BIZspot
 
-# Graphics
+## Graphics
 
 <p  align="center" >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png" 
    width="80%"   />
   </p>
 
-# Team
+## Team
 
 4INSAT
 
 [Jihed Chalghaf](https://github.com/jihedchalghaf)
 
 
-# Short description
+## Short description
 
-Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.
+BIZspot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.
  
-# [Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
+## Promotional Video
+[Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
 
 <p  align="center" >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Code/resources/android/splash/drawable-land-mdpi-screen.png" >
  </p>
  
 
-# Description
+## Description
 
-BIZspot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community; the clients.
-Did you ever need a certain service and didn't know where to search? to gather information about some category of businesses? or to consult about a company before dealing with them?
-If simple googling didn't get you enough information, then this app will save you!
-Just sign up and search our big list of businesses by putting in some key words and tags, and you'll get a complete list of options, each with a full description, their geological position, their business hours and most importantly; a rating and a list of reviews from our users who dealt with them.
-Have you ever felt that your business deserves more media attention but isn't getting any?
-Just create an account for your company/business and fill in all the info about it; you'll be getting stars(reviews on the app) and clients in no time.
-The app will be hybrid; available for all platforms.
-Users begin by creating an account, either linked with their Facebook or Gmail account.
-Then they are asked to fill in their personal information.
-They will immediatly be able to search for services and businesses by tags or name etc.. on which they can comment their experiences or give a rating. Whether the user is looking for a vet, a specific kind of clothes vendor, a bank with good user service or even seeking a good company to work with, everything will be available and easy to access!
-And finally they can submit a request to create a thread for your business, after filling all the important information, and wait for approval.
-This will improve the quality of business products and service interactions, by quickly delivering the necessary feedback from the clients to the owners, while at the same time raising awareness in the community about the good and bad ones.
+* BIZspot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community; the clients.<br/>
+Did you ever need a certain service and didn't know where to search? to gather information about some category of businesses? or to consult about a company before dealing with them?<br/>
+If simple googling didn't get you enough information, then this app will save you!<br/>
+
+* Just sign up and search our big list of businesses by putting in some key words and tags, and you'll get a complete list of options, each with a full description, their geological position, their business hours and most importantly; a rating and a list of reviews from our users who dealt with them.<br/>
+Have you ever felt that your business deserves more media attention but isn't getting any?<br/>
+
+* Just create an account for your company/business and fill in all the info about it; you'll be getting stars(reviews on the app) and clients in no time.<br/>
+
+* The app will be **hybrid**; available for all platforms.<br/>
+
+* Users begin by creating an account, either linked with their Facebook or Gmail account.
+Then they are asked to fill in their personal information.<br/>
+They will immediatly be able to search for services and businesses by tags or name etc.. on which they can comment their experiences or give a rating. Whether the user is looking for a vet, a specific kind of clothes vendor, a bank with good user service or even seeking a good company to work with, everything will be available and easy to access!<br/>
+And finally they can submit a request to create a thread for your business, after filling all the important information, and wait for approval.<br/>
+
+* This will improve the quality of business products and service interactions, by quickly delivering the necessary feedback from the clients to the owners, while at the same time raising awareness in the community about the good and bad ones.
 
 
 # Screenshots
