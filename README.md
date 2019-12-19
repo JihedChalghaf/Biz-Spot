@@ -22,6 +22,9 @@ BIZspot is a mobile application that serves as a network of business owners and 
 
 
 ## Promotional Video
+
+We created a promotional video and uploaded it to Youtube. Please click on the image to watch our video:
+
 [![](https://img.youtube.com/vi/YKQZ-_8ZWIw/sddefault.jpg)](https://www.youtube.com/watch?v=YKQZ-_8ZWIw)
 
  
