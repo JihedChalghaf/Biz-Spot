@@ -22,7 +22,7 @@ BIZspot is a mobile application that serves as a network of business owners and 
 
 
 ## Promotional Video
-[Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
+[![](https://img.youtube.com/vi/YKQZ-_8ZWIw/sddefault.jpg)](https://www.youtube.com/watch?v=YKQZ-_8ZWIw)
 
  
 
