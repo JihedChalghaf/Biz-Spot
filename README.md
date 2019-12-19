@@ -14,7 +14,7 @@
 
 ## Short description
 
-BIZspot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.
+BIZspot is a mobile application that serves as a network of business owners and service providers, built in order to ease their access to the community as well as providing individuals just what they need & in no time.
  
 ## Promotional Video
 [Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
@@ -26,7 +26,7 @@ BIZspot is a mobile application that serves as a network of business owners and 
 
 ## Description
 
-* BIZspot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community; the clients.<br/>
+* BIZspot is a mobile application that serves as a network of business owners and service providers, built in order to ease their access to the community as well as providing individuals just what they need & in no time.<br/>
 Did you ever need a certain service and didn't know where to search? to gather information about some category of businesses? or to consult about a company before dealing with them?<br/>
 If simple googling didn't get you enough information, then this app will save you!<br/>
 
@@ -67,4 +67,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Summary
 
-| [Bizspot app's Apk](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Apk/BizspotApp.apk) | [BIZspot repository](https://github.com/JihedChalghaf/Biz-Spot) | Team Name: 4INSAT | Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.| Licence: MIT | Country: Tunisia | Collaborators: [Jihed Chalghaf](https://github.com/jihedchalghaf) |
+| [Bizspot app's Apk](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Apk/BizspotApp.apk) | [BIZspot repository](https://github.com/JihedChalghaf/Biz-Spot) | Team Name: 4INSAT | BIZspot is a mobile application that serves as a network of business owners and service providers, built in order to ease their access to the community as well as providing individuals just what they need & in no time.| Licence: MIT | Country: Tunisia | Collaborators: [Jihed Chalghaf](https://github.com/jihedchalghaf) |
