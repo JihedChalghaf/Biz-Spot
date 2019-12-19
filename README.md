@@ -1,6 +1,4 @@
-# BIZspot
-
-## Graphics
+## BIZspot - Hybrid App for the 2019 IEEEmadC Mobile Application Development Contest
 
 <p  align="center" >
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png" 
@@ -47,7 +45,7 @@ And finally they can submit a request to create a thread for your business, afte
 * This will improve the quality of business products and service interactions, by quickly delivering the necessary feedback from the clients to the owners, while at the same time raising awareness in the community about the good and bad ones.
 
 
-# Screenshots
+## Screenshots
 
 <div style="display : inline-block;margin : 3% 3% 3% 3%">
 <img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Screenshots/home.png"  width="24%"   >
@@ -57,7 +55,7 @@ And finally they can submit a request to create a thread for your business, afte
 <div>
 
   
-# Licence
+## Licence
 
 MIT License
 
@@ -67,6 +65,6 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-# Summary
+## Summary
 
 | [Bizspot app's Apk](https://github.com/JihedChalghaf/Biz-Spot/blob/master/Apk/BizspotApp.apk) | [BIZspot repository](https://github.com/JihedChalghaf/Biz-Spot) | Team Name: 4INSAT | Biz-Spot is a mobile application that serves as a network of business owners and service providers in order to ease their access to the community.| Licence: MIT | Country: Tunisia | Collaborators: [Jihed Chalghaf](https://github.com/jihedchalghaf) |
