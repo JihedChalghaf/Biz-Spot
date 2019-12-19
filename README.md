@@ -1,7 +1,7 @@
 ## BIZspot - Hybrid App for the 2019 IEEEmadC Mobile Application Development Contest
 
 <p  align="center" >
-<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Default.png" 
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Primary.png" 
    width="80%"   />
   </p>
 
@@ -15,13 +15,15 @@
 ## Short description
 
 BIZspot is a mobile application that serves as a network of business owners and service providers, built in order to ease their access to the community as well as providing individuals just what they need & in no time.
- 
+<p  align="center" >
+<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Assets/Featured%20graphic%20Secondary.png" >
+ </p>
+
+
+
 ## Promotional Video
 [Promotional Video](https://www.youtube.com/watch?v=tj7BAOdBkIA)
 
-<p  align="center" >
-<img src="https://github.com/JihedChalghaf/Biz-Spot/blob/master/Code/resources/android/splash/drawable-land-mdpi-screen.png" >
- </p>
  
 
 ## Description
